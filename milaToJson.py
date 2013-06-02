@@ -93,7 +93,7 @@ def _objFromAttr(attr):
 def _mapNetwork(node,objectList):
 	if node not in objectList:
 		objectList.append(node)
-		connections = getConnections(node)
+		connections = _getConnections(node)
 	if connections is not None:
 		for i in connections:
 			objectList = mapNetwork(_objFromAttr(i[1]),objectList)
